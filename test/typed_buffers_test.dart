@@ -265,10 +265,10 @@ void testIntBuffer(
   expect(buffer.length, equals(samples.length));
 
   // Both values are in `samples`, but equality is performed without rounding.
-  // for signed 64 bit ints, min and max wrap around. min-1=max and max+1=min
-  if (bits == 64){
-    // TODO(keertip): fix tests for UInt64 as now uints are represented as
-    // signed ints.
+  // For signed 64 bit ints, min and max wrap around, min-1=max and max+1=min
+  if (bits == 64) {
+    // TODO(keertip): fix tests for Uint64 / In64 as now Uints are represented
+    // as signed ints.
     expect(buffer.contains(min - 1), isTrue);
   } else {
     expect(buffer.contains(min - 1), isFalse);
