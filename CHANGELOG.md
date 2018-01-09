@@ -1,7 +1,3 @@
-## 1.1.6
-
-* Fix tests to work with Dart 2.0 fixed size ints.
-
 ## 1.1.5
 
 * Undo unnessesary SDK version constraint tweak.
