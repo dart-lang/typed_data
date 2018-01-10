@@ -185,12 +185,11 @@ void testInt(int bits, buffer(int length), {String testOn}) {
 }
 
 const List<int> intSamples = const [
-  0x1000000000000001,
-  0x7aaaaaaaaaaaaaaa,
-  0x7000000000000001,
-  0x7000000000000000,
-  0x7fffffffffffffff, // 2^63-1
+  0x0ffffffffffffffff,
+  0xaaaaaaaaaaaaaaaa,
+  0x8000000000000001,
   0x8000000000000000, // 2^63
+  0x7fffffffffffffff,
   0x5555555555555555,
   0x100000001,
   0x100000000, // 2^32
