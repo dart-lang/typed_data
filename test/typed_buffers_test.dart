@@ -185,12 +185,11 @@ void testInt(int bits, buffer(int length), {String testOn}) {
 }
 
 const List<int> intSamples = const [
-  0x1000000000000001,
-  0x7aaaaaaaaaaaaaaa,
-  0x7000000000000001,
-  0x7000000000000000,
-  0x7fffffffffffffff, // 2^63-1
+  0x0ffffffffffffffff,
+  0xaaaaaaaaaaaaaaaa,
+  0x8000000000000001,
   0x8000000000000000, // 2^63
+  0x7fffffffffffffff,
   0x5555555555555555,
   0x100000001,
   0x100000000, // 2^32
@@ -264,19 +263,22 @@ void testIntBuffer(
   // Remove range works and changes length.
   buffer.removeRange(samples.length, buffer.length);
   expect(buffer.length, equals(samples.length));
-
+  
   // Both values are in `samples`, but equality is performed without rounding.
   // For signed 64 bit ints, min and max wrap around, min-1=max and max+1=min
   if (bits == 64) {
-    // TODO(keertip): fix tests for Uint64 / In64 as now Uints are represented
+    // TODO(keertip): fix tests for Uint64 / Int64 as now Uints are represented
     // as signed ints.
     expect(buffer.contains(min - 1), isTrue);
+    expect(buffer.contains(max + 1), isTrue);
   } else {
+    // Both values are in `samples`, but equality is performed without rounding.
     expect(buffer.contains(min - 1), isFalse);
     expect(buffer.contains(max + 1), isFalse);
-    expect(buffer.contains(round(max + 1)), isTrue);
   }
   expect(buffer.contains(round(min - 1)), isTrue);
+  expect(buffer.contains(round(max + 1)), isTrue);
+
 
   // Accessing the underlying buffer works.
   buffer.length = 2;
