@@ -308,7 +308,8 @@ testFloat32x4Buffer(List floatSamples) {
 // Takes bit-size, min value, max value, function to create a buffer, and
 // the rounding that is applied when storing values outside the valid range
 // into the buffer.
-void testFloatBuffer(int bitSize, List<double> samples, create(), double round(double v)) {
+void testFloatBuffer(
+    int bitSize, List<double> samples, create(), double round(double v)) {
   test("Float${bitSize}Buffer", () {
     var buffer = create();
     expect(buffer, new isInstanceOf<List<double>>());
