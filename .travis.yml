@@ -3,7 +3,9 @@ dart:
   - dev
 
 dart_task:
-  - test: -p vm,firefox
+  - test: -p vm
+    xvfb: false
+  - test: -p firefox
   - dartfmt
   - dartanalyzer
 
