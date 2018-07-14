@@ -5,7 +5,8 @@ dart:
 dart_task:
   - test: -p vm
     xvfb: false
-  - test: -p firefox
+  # TODO: reinstate once https://github.com/dart-lang/typed_data/issues/16 is fixed
+  # - test: -p firefox
   - dartfmt
   - dartanalyzer
 
