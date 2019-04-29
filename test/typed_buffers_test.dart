@@ -74,11 +74,12 @@ void initTests(List<int> intSamples) {
   group("addAll", () {
     for (var type in ['a list', 'an iterable']) {
       group("with $type", () {
-        List<int> source;
+        Iterable<int> source;
         Uint8Buffer buffer;
         setUp(() {
           source = [1, 2, 3, 4, 5];
-          if (type == 'an iterable') source = source.reversed.toList().reversed;
+          if (type == 'an iterable')
+            source = (source as List<int>).reversed.toList().reversed;
           buffer = Uint8Buffer();
         });
 
@@ -125,11 +126,12 @@ void initTests(List<int> intSamples) {
   group("insertAll", () {
     for (var type in ['a list', 'an iterable']) {
       group("with $type", () {
-        List<int> source;
+        Iterable<int> source;
         Uint8Buffer buffer;
         setUp(() {
           source = [1, 2, 3, 4, 5];
-          if (type == 'an iterable') source = source.reversed.toList().reversed;
+          if (type == 'an iterable')
+            source = (source as List<int>).reversed.toList().reversed;
           buffer = Uint8Buffer()..addAll([6, 7, 8, 9, 10]);
         });
 
