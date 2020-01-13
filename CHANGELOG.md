@@ -1,4 +1,4 @@
-## 1.1.7
+## 1.1.7-dev
 
 * Update min Dart SDK to `2.4.0`.
 
