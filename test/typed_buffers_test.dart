@@ -477,7 +477,7 @@ void testIntBuffer(
 
   var samples = intSamples.toList()..addAll(intSamples.map((x) => -x));
   for (var value in samples) {
-    int length = buffer.length;
+    var length = buffer.length;
     buffer.add(value);
     expect(buffer.length, equals(length + 1));
     expect(buffer[length], equals(round(value)));
