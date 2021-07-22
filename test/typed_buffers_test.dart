@@ -553,7 +553,7 @@ class MatchesInt32x4 extends Matcher {
   MatchesInt32x4(this.result);
 
   @override
-    Description describe(Description description) =>
+  Description describe(Description description) =>
       description.add('Int32x4.==');
 
   @override
