@@ -16,6 +16,6 @@ import 'package:typed_data/typed_data.dart';
 
 ## Typed buffers
 
-Typed buffers are growable lists backed by typed arrays.
-These are similar to the growable lists returned by `List()`, 
-but store typed data like a typed data list.
+Typed buffers are growable lists backed by typed arrays. These are similar to
+the growable lists created by `<int>[]` or `<double>[]`, but store typed data
+like a typed data list.
