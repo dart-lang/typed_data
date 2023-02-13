@@ -26,7 +26,7 @@
 
 ## 1.1.5
 
-* Undo unnessesary SDK version constraint tweak.
+* Undo unnecessary SDK version constraint tweak.
 
 ## 1.1.4
 

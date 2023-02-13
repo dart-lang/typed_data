@@ -337,7 +337,7 @@ abstract class _TypedQueue<E, L extends List<E>> with ListMixin<E> {
 }
 
 abstract class _IntQueue<L extends List<int>> extends _TypedQueue<int, L> {
-  _IntQueue(L queue) : super(queue);
+  _IntQueue(super.queue);
 
   @override
   int get _defaultValue => 0;
@@ -345,7 +345,7 @@ abstract class _IntQueue<L extends List<int>> extends _TypedQueue<int, L> {
 
 abstract class _FloatQueue<L extends List<double>>
     extends _TypedQueue<double, L> {
-  _FloatQueue(L queue) : super(queue);
+  _FloatQueue(super.queue);
 
   @override
   double get _defaultValue => 0.0;

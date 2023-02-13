@@ -14,3 +14,4 @@ linter:
     - package_api_docs
     - prefer_const_constructors
     - test_types_in_equals
+    - use_super_parameters
