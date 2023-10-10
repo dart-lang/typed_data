@@ -159,7 +159,7 @@ abstract class TypedDataBuffer<E> extends ListBase<E> {
   }
 
   // Reverses the range [start..end) of buffer.
-  static void _reverse(List buffer, int start, int end) {
+  void _reverse(List<E> buffer, int start, int end) {
     end--; // Point to last element, not after last element.
     while (start < end) {
       var first = buffer[start];

@@ -558,7 +558,7 @@ class MatchesInt32x4 extends Matcher {
       description.add('Int32x4.==');
 
   @override
-  bool matches(Object? item, Map matchState) =>
+  bool matches(Object? item, Map<dynamic, dynamic> matchState) =>
       item is Int32x4 &&
       result.x == item.x &&
       result.y == item.y &&
