@@ -1,4 +1,4 @@
-## 1.3.3-wip
+## 1.4.0-wip
 
 * The type of the `buffer` constructor argument to `TypedDataBuffer` is now
   `TypeDataList<E>` (instead of `List<E>`). While this is breaking change
